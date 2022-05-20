@@ -4,6 +4,7 @@ const res = require("express/lib/response");
 const { Router } = express;
 const spaceRoute = new Router();
 const Spaces = require("../models").space;
+const Story = require("../models").story;
 
 spaceRoute.get("/", async (req, res, next) => {
   try {
@@ -26,4 +27,17 @@ spaceRoute.get("/:id", async (req, res, next) => {
   }
 });
 
+spaceRoute.delete("/sory/:id", async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    const storyToDelete = Story.findByPk(id);
+
+    if (!storyToDelete) return res.status(404).send("Not found");
+    await storyToDelete.destroy();
+
+    res.send({ message: "story delected" });
+  } catch (e) {
+    console.log(e.message);
+  }
+});
 module.exports = spaceRoute;

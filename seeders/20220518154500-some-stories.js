@@ -9,7 +9,7 @@ module.exports = {
           name: "Day at the beach",
           content: "I spent the day at the beach",
           imageUrl:
-            "https://i.guim.co.uk/img/media/a3cada51454f953a60cae1a257ac963f89906b2c/0_200_6000_3600/master/6000.jpg",
+            "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F28%2F2020%2F06%2F29%2Fkey-west-beach-florida-BEACHWKNDS0620.jpg",
           createdAt: new Date(),
           updatedAt: new Date(),
           spaceId: 1,
